@@ -27,6 +27,7 @@ class Restaurant
      end 
     
      def total 
-        @total
+        @total = []
+        @order.each { |hash| @total << hash}
 
 end 
