@@ -1,5 +1,5 @@
 class Restaurant
-    attr_reader :menu, :order, :total
+    attr_reader :menu, :order
 
     def initialize
         @menu = { 'burger': 5,
@@ -8,7 +8,6 @@ class Restaurant
                   'ice_cream': 2
                 }
         @order = []
-        @total = 0
     end 
 
     def menu_print
@@ -17,7 +16,6 @@ class Restaurant
 
     def add_item(item_from_menu)
         @order << item_from_menu
-        @total +=1
     end 
 
     def include?(item)
@@ -28,5 +26,7 @@ class Restaurant
         @menu.fetch(item).to_f
      end 
     
+     def total 
+        @total
 
 end 
